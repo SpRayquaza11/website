@@ -1,6 +1,11 @@
 :root{
-    --maintext: orange;
+    --maintext: #ff7b00;
+    --maintext2:#ffc400;
+    --linktext: #942310;
+    --mainColor:#000000 ;
 
+    --borderColor: #130c04;
+    --boxcolor:var(--borderColor)
 }
 
 
@@ -9,13 +14,53 @@ html, body{
     margin: 0;    
 
 }
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+h3 { font-size: 28px;}
+h4 { font-size: 24px;}
+h5 { font-size: 29px;}
+h6 { font-size: 16px;}
 
 h1,h2,h3,h4,h5,h6,strong{
     color: var(--maintext);
+    font-family: 'Rubik', sans-serif;
 
 }
 
 p,li,span,label,input,textarea{
-    color: var(--maintext);
+    color: var(--maintext2);
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Rubik', sans-serif;
+}
 
+a{
+  color: var(--linktext); 
+  text-decoration: none;
+  font-family: 'Roboto Mono', monospace;
+  font-family: 'Rubik', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+.s1{
+    background-color: var(--mainColor);
+    border-bottom: 3px solid var(--borderColor);
+    overflow: auto;
+}
+.s2{
+    background-color: var(--boxcolor);
+    border-bottom: 3px solid var(--borderColor);
+    overflow: auto;
+}
+.main-container{
+    width: 1200px;
+    margin : 0 auto;
+}
+
+@media screen and (max-width: 1200px){
+    .main-container{
+        width :90%;
+    }
 }
