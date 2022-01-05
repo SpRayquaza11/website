@@ -18,7 +18,7 @@ h1 { font-size: 46px;}
 h2 { font-size: 26px;}
 h3 { font-size: 18px;}
 h4 { font-size: 14px;}
-h5 { font-size: 19px;}
+h5 { font-size: 9px;}
 h6 { font-size: 6px;}
 
 h1,h2,h3,h4,h5,h6,strong{
@@ -54,18 +54,45 @@ ul{
     border-bottom: 3px solid var(--borderColor);
     overflow: auto;
 }
-.main-container{
+.main_container{
     width: 1200px;
     margin : 0 auto;
 }
 
 .main_wrapper{
     display: grid;
-    justify-content: center;
+    text-align:  center;
+    align-content: center;
     border : 2px dashed #ff7b00;
-    min-height: 20em;
+    min-height: 10em;
 }
+.wrapper_1_nav{
+    background-color: var(--mainColor);
+    border: 1px solid var(--borderColor);
+    box-shadow: -14px 15px 19px -15px rgba(247,150,0,1);
+    -webkit-box-shadow: -14px 15px 19px -15px rgba(247,150,0,1);
+    -moz-box-shadow: -14px 15px 19px -15px rgba(247,150,0,1);
 
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 2em 25em;
+    grid-template-areas:
+    'nav_bar nav_bar'
+    'nav_L nav_R'
+     ;
+}
+.nav_bar{
+    grid-area: nav_bar;
+    border: 1px dashed #ff7b00 ;
+}
+.nav_L{
+    grid-area: nav_L;
+    border: 1px dashed #ff7b00;
+}
+.nav_R{
+    grid-area: nav_R;
+    border: 1px dashed #ff7b00;
+}
 @media screen and (max-width: 1200px){
     .main-container{
         width :90%;
